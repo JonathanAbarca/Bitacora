@@ -40,14 +40,15 @@ public class Principal extends javax.swing.JFrame {
         pnl_Principal.setLayout(pnl_PrincipalLayout);
         pnl_PrincipalLayout.setHorizontalGroup(
             pnl_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 878, Short.MAX_VALUE)
+            .addGap(0, 1093, Short.MAX_VALUE)
         );
         pnl_PrincipalLayout.setVerticalGroup(
             pnl_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 496, Short.MAX_VALUE)
+            .addGap(0, 606, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Nuevo Regis.");
+        jMenu1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
 
         mniNuevoPunto.setText("Punto vaciado");
         mniNuevoPunto.addActionListener(new java.awt.event.ActionListener() {
@@ -68,12 +69,15 @@ public class Principal extends javax.swing.JFrame {
         mnubPrincipal.add(jMenu1);
 
         jMenu2.setText("Ver Incidentes");
+        jMenu2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         mnubPrincipal.add(jMenu2);
 
         jMenu3.setText("Modificaciónes");
+        jMenu3.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         mnubPrincipal.add(jMenu3);
 
         jMenu4.setText("Informes");
+        jMenu4.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         mnubPrincipal.add(jMenu4);
 
         setJMenuBar(mnubPrincipal);
@@ -82,11 +86,13 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnl_Principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(pnl_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnl_Principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnl_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -94,7 +100,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void mniNuevoPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniNuevoPuntoActionPerformed
         Pnl_NuevoPuntoVaciado miNuevoPunto = new Pnl_NuevoPuntoVaciado();
-        miNuevoPunto.setSize(878, 496);
+        miNuevoPunto.setSize(pnl_Principal.getSize());
         miNuevoPunto.setLocation(0, 0);
         
         pnl_Principal.removeAll();
