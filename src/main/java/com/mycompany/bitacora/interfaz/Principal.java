@@ -2,6 +2,8 @@
 package com.mycompany.bitacora.interfaz;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
+import javax.swing.JPanel;
 
 /**
  *
@@ -11,6 +13,9 @@ public class Principal extends javax.swing.JFrame {
 
     public Principal() {
         initComponents();
+        Pnl_Principal miPrincipal = new Pnl_Principal();
+        
+        paneles(miPrincipal);
     }
 
     /**
@@ -22,17 +27,22 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu4 = new javax.swing.JMenu();
         pnl_Principal = new javax.swing.JPanel();
         mnubPrincipal = new javax.swing.JMenuBar();
+        jMenu5 = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
         mniNuevoPunto = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
+
+        jMenu4.setText("jMenu4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Bitácora de Mantenciónes");
+        setResizable(false);
 
         pnl_Principal.setOpaque(false);
 
@@ -46,6 +56,17 @@ public class Principal extends javax.swing.JFrame {
             pnl_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 606, Short.MAX_VALUE)
         );
+
+        mnubPrincipal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jMenu5.setText("Inicio");
+        jMenu5.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jMenu5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu5MouseClicked(evt);
+            }
+        });
+        mnubPrincipal.add(jMenu5);
 
         jMenu1.setText("Nuevo Regis.");
         jMenu1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
@@ -66,6 +87,14 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
+        jMenuItem2.setText("Prueba");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
         mnubPrincipal.add(jMenu1);
 
         jMenu2.setText("Ver Incidentes");
@@ -75,10 +104,6 @@ public class Principal extends javax.swing.JFrame {
         jMenu3.setText("Modificaciónes");
         jMenu3.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         mnubPrincipal.add(jMenu3);
-
-        jMenu4.setText("Informes");
-        jMenu4.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        mnubPrincipal.add(jMenu4);
 
         setJMenuBar(mnubPrincipal);
 
@@ -99,35 +124,52 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mniNuevoPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniNuevoPuntoActionPerformed
-        Pnl_NuevoPuntoVaciado miNuevoPunto = new Pnl_NuevoPuntoVaciado();
-        miNuevoPunto.setSize(pnl_Principal.getSize());
-        miNuevoPunto.setLocation(0, 0);
+        Pnl_NuevoPuntoVaciado minuevoPunto = new Pnl_NuevoPuntoVaciado();
         
-        pnl_Principal.removeAll();
-        pnl_Principal.add(miNuevoPunto,BorderLayout.CENTER);
-        pnl_Principal.revalidate();
-        pnl_Principal.repaint();
+        paneles(minuevoPunto);
     }//GEN-LAST:event_mniNuevoPuntoActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        Pnl_TareaExtra miNuevaTarea = new Pnl_TareaExtra();
-        miNuevaTarea.setSize(878, 496);
-        miNuevaTarea.setLocation(0, 0);
         
-        pnl_Principal.removeAll();
-        pnl_Principal.add(miNuevaTarea,BorderLayout.CENTER);
-        pnl_Principal.revalidate();
-        pnl_Principal.repaint();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenu5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu5MouseClicked
+        Pnl_Principal miPrincipal = new Pnl_Principal();
+        
+        paneles(miPrincipal);
+    }//GEN-LAST:event_jMenu5MouseClicked
+    
+    public void paneles(JPanel p){
+        
+        Dimension mipanel = new Dimension();
+        mipanel.setSize(p.getPreferredSize());
+        System.out.println(mipanel);
+        p.setSize(mipanel);
+        
+        p.setLocation(0, 0);
+        
+        pnl_Principal.removeAll();
+        pnl_Principal.add(p,BorderLayout.CENTER);
+        pnl_Principal.revalidate();
+        pnl_Principal.repaint();
+        
+        
+    
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem mniNuevoPunto;
     private javax.swing.JMenuBar mnubPrincipal;
-    private javax.swing.JPanel pnl_Principal;
+    public javax.swing.JPanel pnl_Principal;
     // End of variables declaration//GEN-END:variables
 }
