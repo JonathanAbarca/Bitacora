@@ -9,6 +9,8 @@
     <class>com.mycompany.bitacora.logica.Historial</class>
     <class>com.mycompany.bitacora.logica.ComponentesInternos</class>
     <class>com.mycompany.bitacora.logica.ComponentesOP</class>
+    <class>com.mycompany.bitacora.logica.TipoComponentes</class>
+    <class>com.mycompany.bitacora.logica.Reparaciones</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bitacora?serverTimezone=UTC"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

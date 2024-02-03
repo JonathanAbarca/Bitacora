@@ -8,10 +8,11 @@ import java.awt.BorderLayout;
  * @author Jonathan Abarca
  */
 public class Pnl_NuevoPuntoVaciado extends javax.swing.JPanel {
-
+        
     public Pnl_NuevoPuntoVaciado() {
         
         initComponents();
+        
     }
 
     /**
@@ -100,8 +101,8 @@ public class Pnl_NuevoPuntoVaciado extends javax.swing.JPanel {
         cmbEnchufe35CL = new javax.swing.JComboBox<>();
         cmbAldabaCL = new javax.swing.JComboBox<>();
 
-        setMinimumSize(new java.awt.Dimension(1100, 900));
-        setPreferredSize(new java.awt.Dimension(1100, 900));
+        setMinimumSize(new java.awt.Dimension(1150, 900));
+        setPreferredSize(new java.awt.Dimension(1150, 900));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Punto de vaciado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 18))); // NOI18N
 
@@ -110,6 +111,10 @@ public class Pnl_NuevoPuntoVaciado extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel2.setText("N° Punto de vaciado :");
+
+        cmbNcalle.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
+
+        cmbNpuntoVaciado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "15", "17", "19", "20" }));
 
         btnComprobar.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         btnComprobar.setText("Comprobar");
@@ -160,6 +165,8 @@ public class Pnl_NuevoPuntoVaciado extends javax.swing.JPanel {
         txtFocoAlum.setText("LED");
         txtFocoAlum.setPreferredSize(new java.awt.Dimension(56, 25));
 
+        cmbAlim220.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -201,35 +208,61 @@ public class Pnl_NuevoPuntoVaciado extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel7.setText("CB Ventilador :");
 
+        cmbReleDifCbPrinCI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
+
+        cmbCBVentiCI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
+
         jLabel8.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel8.setText("Contactor Vent :");
+
+        cmbContracVentiladorCI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel9.setText("OL Ventilador :");
 
+        cmbOLVentiCI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
+
         jLabel10.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel10.setText("CB Bomba H :");
+
+        cmbCbBombaHCI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
+
+        cmbCBPrincipalCI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
 
         jLabel25.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel25.setText("OL Bomba H :");
 
+        cmbOlBombaHCI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
+
         jLabel26.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel26.setText("Contactor Bomba H :");
+
+        cmbContacBombaHCI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
 
         jLabel27.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel27.setText("Trafo 600/220v :");
 
+        cmbTrafo600220CI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
+
         jLabel28.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel28.setText("CB Trafo 600/220v :");
+
+        cmbCbTrafo600220CI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
 
         jLabel29.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel29.setText("CB Enchufe Hem. 30[A] :");
 
+        cmbCbEnchufeH30CI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
+
         jLabel30.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel30.setText("Trafo 220/110v :");
 
+        cmbTrafo220110CI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
+
         jLabel31.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel31.setText("Enchufe Hembra 30[A] :");
+
+        cmbEnchufeHem30CI.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
 
         btnGuardar.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         btnGuardar.setText("Guardar");
@@ -272,7 +305,7 @@ public class Pnl_NuevoPuntoVaciado extends javax.swing.JPanel {
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(cmbEnchufeHem30CI, 0, 150, Short.MAX_VALUE)
+                    .addComponent(cmbEnchufeHem30CI, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cmbCbEnchufeH30CI, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cmbTrafo220110CI, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cmbTrafo600220CI, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -283,11 +316,11 @@ public class Pnl_NuevoPuntoVaciado extends javax.swing.JPanel {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(cmbCbBombaHCI, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cmbContracVentiladorCI, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cmbOLVentiCI, javax.swing.GroupLayout.Alignment.TRAILING, 0, 150, Short.MAX_VALUE))
+                            .addComponent(cmbOLVentiCI, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(cmbReleDifCbPrinCI, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cmbCBPrincipalCI, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cmbCBVentiCI, javax.swing.GroupLayout.Alignment.TRAILING, 0, 150, Short.MAX_VALUE))))
+                            .addComponent(cmbCBVentiCI, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(39, 39, 39))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
@@ -425,6 +458,8 @@ public class Pnl_NuevoPuntoVaciado extends javax.swing.JPanel {
 
         jLabel15.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel15.setText("Alimentación Gen. 600V :");
+
+        cmbAlimenGen600SG.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHNEIDER E.-100[A]\t", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-63[A]", "SQUARE D-100[HP]/75[KW]", "SQUARE D-M.L.P.-20-90[A]\t", "ABL SURSUM-1,0-1,6[A]", "SCHNEIDER E.-RH99M", "SCHNEIDER E.-1,6-2,5[A]", "SCHNEIDER E.-3X6[A]", "3[KVA]", "1[KVA]", "SI- (ALIMENTADO)", "GUIRNALDA Z29", "TDA S/E XC31AS", "TDA CDC -02 XC31AS" }));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -641,8 +676,8 @@ public class Pnl_NuevoPuntoVaciado extends javax.swing.JPanel {
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 341, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -672,6 +707,7 @@ public class Pnl_NuevoPuntoVaciado extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        
         Controladora miControl = new Controladora();
         //punto vaciado
         String numCalle = (String)cmbNcalle.getSelectedItem();
@@ -730,8 +766,7 @@ public class Pnl_NuevoPuntoVaciado extends javax.swing.JPanel {
         this.revalidate();
         this.repaint();
     }//GEN-LAST:event_btnCancelarActionPerformed
-
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnComprobar;

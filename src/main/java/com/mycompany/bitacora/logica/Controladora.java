@@ -2,6 +2,8 @@
 package com.mycompany.bitacora.logica;
 
 import com.mycompany.bitacora.persistencia.ControladorPersistencia;
+import java.util.List;
+
 
 /**
  *
@@ -78,5 +80,35 @@ public class Controladora {
         //Llamado a controlpersis para guardar los datos
         miControlPersis.guardarOP(miComponentesOP,miPuntoVaciado,miAlumbrado,miCajaLocal,miSeguridadGabinete,miHistorial,miComponentesInternos);
     }
-    
+
+    public List<Reparaciones> traerDatos() {
+       return miControlPersis.cargarTabla(); 
+    }
+
+    public void borrarReparacion(int id_repa) {
+        miControlPersis.borrarRepara(id_repa);
+    }
+
+    public Reparaciones datosAModificar(int num_repa) {
+        return miControlPersis.modRepas(num_repa);
+    }
+
+    public void modificarRepas(Reparaciones miRepara, String calle, String punto, String fecha,
+            String estado, String nombre, String turno, String grupo, String descrip) {
+        
+        miRepara.setCalle(calle);
+        miRepara.setPunto(punto);
+        miRepara.setFecha(fecha);
+        miRepara.setEstado(estado);
+        miRepara.setNombre(nombre);
+        miRepara.setTurno(turno);
+        miRepara.setGrupo(grupo);
+        miRepara.setDescrip(descrip);
+        
+        miControlPersis.modificaRepas(miRepara);
+        
+    }
+
+   
+
 }

@@ -36,6 +36,8 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        mniReparacion = new javax.swing.JMenuItem();
+        mniMantenciones = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
 
         jMenu4.setText("jMenu4");
@@ -54,7 +56,7 @@ public class Principal extends javax.swing.JFrame {
         );
         pnl_PrincipalLayout.setVerticalGroup(
             pnl_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 606, Short.MAX_VALUE)
+            .addGap(0, 730, Short.MAX_VALUE)
         );
 
         mnubPrincipal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -69,7 +71,7 @@ public class Principal extends javax.swing.JFrame {
         mnubPrincipal.add(jMenu5);
 
         jMenu1.setText("Nuevo Regis.");
-        jMenu1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jMenu1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
 
         mniNuevoPunto.setText("Punto vaciado");
         mniNuevoPunto.addActionListener(new java.awt.event.ActionListener() {
@@ -97,12 +99,31 @@ public class Principal extends javax.swing.JFrame {
 
         mnubPrincipal.add(jMenu1);
 
-        jMenu2.setText("Ver Incidentes");
-        jMenu2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jMenu2.setText("Tareas");
+        jMenu2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+
+        mniReparacion.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        mniReparacion.setText("Reparación");
+        mniReparacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniReparacionActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mniReparacion);
+
+        mniMantenciones.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        mniMantenciones.setText("Mantención");
+        mniMantenciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniMantencionesActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mniMantenciones);
+
         mnubPrincipal.add(jMenu2);
 
         jMenu3.setText("Modificaciónes");
-        jMenu3.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jMenu3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         mnubPrincipal.add(jMenu3);
 
         setJMenuBar(mnubPrincipal);
@@ -117,7 +138,9 @@ public class Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnl_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(pnl_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -142,6 +165,15 @@ public class Principal extends javax.swing.JFrame {
         
         paneles(miPrincipal);
     }//GEN-LAST:event_jMenu5MouseClicked
+
+    private void mniMantencionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniMantencionesActionPerformed
+        
+    }//GEN-LAST:event_mniMantencionesActionPerformed
+
+    private void mniReparacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniReparacionActionPerformed
+        Pnl_Reparacion miReparacion = new Pnl_Reparacion();
+        paneles(miReparacion);
+    }//GEN-LAST:event_mniReparacionActionPerformed
     
     public void paneles(JPanel p){
         
@@ -168,7 +200,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem mniMantenciones;
     private javax.swing.JMenuItem mniNuevoPunto;
+    private javax.swing.JMenuItem mniReparacion;
     private javax.swing.JMenuBar mnubPrincipal;
     public javax.swing.JPanel pnl_Principal;
     // End of variables declaration//GEN-END:variables
